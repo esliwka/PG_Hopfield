@@ -1,0 +1,1 @@
+# Pattern recognition (A, B, C) using Hopfield Network
