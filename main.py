@@ -15,8 +15,6 @@ def img2array(filename):
     img = cv2.imread(filename)
     img = img.flatten()
     img[img == 255] = 1
-    print("img2array: ")
-    print(img)
     return img
 
 
@@ -24,16 +22,12 @@ def array2img(arr):
     arr[arr == -1] = 0
     arr *= 255
     img = np.reshape(arr, IMAGE_SIZE)
-    print("array2img: ")
-    print(img)
     return img
 
 
 def array2float(arr):
     flt = np.asfarray(arr)
     flt[flt == 0] = -1
-    print("array2float: ")
-    print(flt)
     return flt
 
 
@@ -66,7 +60,7 @@ for file in glob.glob(TRAIN_PATH):
     target.append(array)
 
 target = array2float(target)
-
+#print(target)
 # tworzenie i trening sieci
 net = nl.net.newhop(target)
 
