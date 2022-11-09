@@ -66,6 +66,7 @@ net = nl.net.newhop(target)
 
 # testowanie sieci
 test_net(net, './data/test/a-test.png')
+test_net(net, './data/test/a-rev-test.png')
 test_net(net, './data/test/b-test.png')
 test_net(net, './data/test/c-test.png')
 
